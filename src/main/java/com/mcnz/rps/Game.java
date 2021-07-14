@@ -11,7 +11,6 @@
  * @author baeldung
  * @version 1.1
  */
-
 package com.mcnz.rps;
 
 import javax.swing.JOptionPane;

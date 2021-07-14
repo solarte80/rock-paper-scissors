@@ -16,7 +16,7 @@ public class GameSummaryTest {
 	@Test
 	public void testGetServerGesture() {
 		GameSummary gameSummary = new GameSummary("rock", "scissors", "win");
-		Assert.assertTrue(gameSummary.getServerGesture().equals("scissors1"));
+		Assert.assertTrue(gameSummary.getServerGesture().equals("scissors"));
 	}
 
 	@Test

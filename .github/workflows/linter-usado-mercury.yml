@@ -2,9 +2,10 @@
 
 name: Linter
 
-on: [push]
+on:
 #on: [pull_request]
-
+  push:
+    branches: [ master_1 ]
 jobs:
   checkstyle_job:
     runs-on: ubuntu-latest

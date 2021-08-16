@@ -1,7 +1,7 @@
 name: checkstyle
 
 #on: [push, pull_request]
-on: [push, pull_request]
+on: [push]
 
 jobs:
   java-checkstyle:
@@ -12,10 +12,6 @@ jobs:
       - name: Run Java Checkstyle
         uses: Justintime50/java-checkstyle-action@v1
         with:
-          # The directory to run Checkstyle recursively on.
-          # Default is the root of your project.
-          # directory: /path/to/dir
-
           # The name of the style suite to be used, either 'sun' or 'google'.
           # Default is shown.
           style_suite: google

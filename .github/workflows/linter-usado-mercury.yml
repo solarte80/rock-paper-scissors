@@ -2,7 +2,8 @@
 
 name: Linter
 
-on: [pull_request]
+on: [push]
+#on: [pull_request]
 
 jobs:
   checkstyle_job:
@@ -16,6 +17,7 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         reporter: 'github-pr-check'
+        event: 'push'
         level: 'error'
         tool_name: 'testtool'
         fail_on_error: true

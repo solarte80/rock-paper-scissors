@@ -7,7 +7,7 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ disabled ]
-  
+  #remember put in branches the real branch
   #Here we say that we are going the workflow every pull but in this excersise I'm going to use it onlu every push so I coment this
   #pull_request:
   #  branches: [ master ]

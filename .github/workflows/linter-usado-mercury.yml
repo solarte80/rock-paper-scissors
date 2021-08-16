@@ -1,23 +1,20 @@
-# This is a basic workflow to help you get started with Actions
+name: checkstyle
 
-name: Linter
+on: [push, pull_request]
 
-on:
-#on: [pull_request]
-  push:
-    branches: [ master_1 ]
 jobs:
-  checkstyle_job:
+  java-checkstyle:
     runs-on: ubuntu-latest
-    name: Checkstyle job
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Run check style
-      uses: nikitasavinov/checkstyle-action@0.4.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        reporter: 'github-pr-check'
-        level: 'error'
-        tool_name: 'testtool'
-        fail_on_error: true
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Run Java Checkstyle
+        uses: Justintime50/java-checkstyle-action@v1
+        with:
+          # The directory to run Checkstyle recursively on.
+          # Default is the root of your project.
+          directory: /path/to/dir
+
+          # The name of the style suite to be used, either 'sun' or 'google'.
+          # Default is shown.
+          style_suite: google
